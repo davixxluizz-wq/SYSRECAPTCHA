@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela de Cadastro</title>
+
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.cadastro{
+    width:360px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.cadastro h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.cadastro label{
+    display:block;
+    margin-top:12px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#555;
+}
+
+.cadastro input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    outline:none;
+    transition:.3s;
+}
+
+.cadastro input:focus{
+    border-color:#4facfe;
+    box-shadow:0 0 5px rgba(79,172,254,.4);
+}
+
+.g-recaptcha{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.cadastro button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#4facfe;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cadastro button:hover{
+    background:#2d8df0;
+}
+</style>
+
+</head>
+<body>
+
+<form class="cadastro" action="#" method="post">
+
+    <h2>Cadastro</h2>
+
+    <label for="nome">Nome</label>
+    <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Digite seu nome"
+        required
+    >
+
+    <label for="email">E-mail</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Digite seu e-mail"
+        required
+    >
+
+    <label for="senha">Senha</label>
+    <input
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="Digite sua senha"
+        required
+    >
+
+    <!-- Substitua SUA_SITE_KEY pela chave do seu site -->
+    <div class="g-recaptcha" data-sitekey="SUA_SITE_KEY"></div>
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+</body>
+</html>
